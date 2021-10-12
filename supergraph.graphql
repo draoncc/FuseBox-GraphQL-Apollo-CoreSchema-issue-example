@@ -1,0 +1,22 @@
+schema @core(feature: "https://specs.apollo.dev/core/v0.1") @core(feature: "https://specs.apollo.dev/join/v0.1") @apollo_studio_metadata(launchId: "175b55ed-8f1e-4bdf-8de1-6dc23c5b512f", buildId: "175b55ed-8f1e-4bdf-8de1-6dc23c5b512f", checkId: null) {
+  query: Query
+  mutation: Mutation
+}
+
+directive @core(feature: String!) repeatable on SCHEMA
+
+directive @join__field(graph: join__Graph, requires: join__FieldSet, provides: join__FieldSet) on FIELD_DEFINITION
+
+directive @join__type(graph: join__Graph!, key: join__FieldSet) repeatable on OBJECT | INTERFACE
+
+directive @join__owner(graph: join__Graph!) on OBJECT | INTERFACE
+
+directive @join__graph(name: String!, url: String!) on ENUM_VALUE
+
+scalar join__FieldSet
+
+enum join__Graph {
+  FILMS @join__graph(name: "films", url: "https://films.example.com")
+}
+
+directive @apollo_studio_metadata(launchId: String, buildId: String, checkId: String) on SCHEMA

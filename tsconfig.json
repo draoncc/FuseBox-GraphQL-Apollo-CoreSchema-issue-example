@@ -1,0 +1,44 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "baseUrl": ".",
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es7", "es6", "es2017", "dom", "esnext.asynciterable"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "pretty": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictFunctionTypes": false,
+    "strictPropertyInitialization": false,
+    "target": "es5",
+    "typeRoots": ["@type-overrides", "node_modules/@types"],
+
+    "skipLibCheck": true,
+    "rootDir": "src",
+    "outDir": "build",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [ "src/*" ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "tmp"
+  ],
+  "include": [
+    "src/*.ts",
+    "src/**/*.ts"
+  ]
+}
